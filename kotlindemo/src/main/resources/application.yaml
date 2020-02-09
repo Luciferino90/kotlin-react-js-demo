@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: KotlinDemo
+
+  r2dbc:
+    url: "r2dbc:mysql://localhost:3306/kotlindemo?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&tinyInt1isBit=false&useSSL=false"
+    username: kotlindemo
+    password: kotlindemo
+  jpa:
+    hibernate:
+      ddl-auto: create
+
+  data:
+    mongodb:
+      uri: mongodb://kotlindemo:kotlindemo@localhost:27017/kotlindemo # Mongo database URI. Cannot be set with host, port and credentials.
+      database: kotlindemo
+      repositories:
+        type: reactive
